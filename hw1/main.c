@@ -11,31 +11,31 @@ void lotto(void){
 		num[i] = 0;
 	}
 	
-	while(n < 5){  //´¶³q¼Æ¦r*5(0~4)
+	while(n < 5){  //ï¿½ï¿½ï¿½qï¿½Æ¦r*5(0~4)
 		var = rand() % 69 + 1;   
 		isExist = 0;   
-		for(int i = 0 ; i <= n ; i++) {  //¤w¸g¦³¼Æ¦rªº®æ¤l 
-			if(num[i] == var){  //¤w¸g¹Lªº®æ¤l¦³¸ò¶Ã¼Æ­«½Æ 
-				isExist = 1;  //§ïÅÜª¬ºA 
+		for(int i = 0 ; i <= n ; i++) {  //ï¿½wï¿½gï¿½ï¿½ï¿½Æ¦rï¿½ï¿½ï¿½ï¿½l 
+			if(num[i] == var){  //ï¿½wï¿½gï¿½Lï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½Ã¼Æ­ï¿½ï¿½ï¿½ 
+				isExist = 1;  //ï¿½ï¿½ï¿½Üªï¿½ï¿½A 
 			}
 		}
-		if(isExist == 0) {  //¨S­«½Æ 
-			num[n] = var;  //¼g¶i¥h®æ¤l 
-			n++;  //´«¤U¤@¦æ 
-		}	//¦³­«½Æ´NÄ~Äòwhile(¤Ï¥¿n¨SÅÜ) 
+		if(isExist == 0) {  //ï¿½Sï¿½ï¿½ï¿½ï¿½ 
+			num[n] = var;  //ï¿½gï¿½iï¿½hï¿½ï¿½l 
+			n++;  //ï¿½ï¿½ï¿½Uï¿½@ï¿½ï¿½ 
+		}	//ï¿½ï¿½ï¿½ï¿½ï¿½Æ´Nï¿½~ï¿½ï¿½while(ï¿½Ï¥ï¿½nï¿½Sï¿½ï¿½) 
 	}
 	num[5] = rand() % 10 + 1;
-	for(int i = 0 ; i < 6 ; i++) {  //¦^¶Ç°}¦C 
+	for(int i = 0 ; i < 6 ; i++) {  //ï¿½^ï¿½Ç°}ï¿½C 
 		fprintf(fp, "%02d ", num[i]);
 	}
 }
 
 int main(){
-	int n;
+	int n=2;
 	srand(time(NULL));
-	printf("Åwªï¥úÁ{ªø©°¼Ö³z±mÁÊ¶R¾÷¥x\n½Ð°Ý±z­n¶R´X²Õ¼Ö³z±m:");
+	printf("ï¿½wï¿½ï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½Ö³zï¿½mï¿½Ê¶Rï¿½ï¿½ï¿½x\nï¿½Ð°Ý±zï¿½nï¿½Rï¿½Xï¿½Õ¼Ö³zï¿½m:");
 	scanf("%d", &n);
-	printf("¤w¬°±zÁÊ¶Rªº%d²Õ¼Ö³z²Õ¦X¿é¥X¦Ülotto.txt", n);
+	printf("ï¿½wï¿½ï¿½ï¿½zï¿½Ê¶Rï¿½ï¿½%dï¿½Õ¼Ö³zï¿½Õ¦Xï¿½ï¿½Xï¿½ï¿½lotto.txt", n);
 	
 	fp = fopen("lotto.txt", "w+");
 	
