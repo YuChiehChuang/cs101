@@ -13,16 +13,16 @@ int rec_strlen(char* s) {
 
 char* my_sort(char* s) {
 	int len = 0;
-    for(int i = 0; *(s + i) != '\0'; i++) {len++;}
-    for(int i = 0; i < len; i++) {
-    	for(int j = 0; j < len - 1 - i; j++) {
+        for(int i = 0; *(s + i) != '\0'; i++) {len++;}
+        for(int i = 0; i < len; i++) {
+    		for(int j = 0; j < len - 1 - i; j++) {
 			if(*(s + j) > *(s + j + 1)) {
 				char temp = *(s + j);
-	            *(s + j) = *(s + j + 1);
-	            *(s + j + 1) = temp;}
-   }
- }
- return s;
+	            		*(s + j) = *(s + j + 1);
+	            		*(s + j + 1) = temp;}
+ 		}
+ 	}
+	return s;
 }
 
 int main() {
